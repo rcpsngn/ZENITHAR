@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZENITHAR Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-600 flex items-center justify-center h-screen">
+
+<div class="bg-white p-10 rounded-2xl shadow-2xl w-96">
+    <h2 class="text-3xl font-bold text-red-600 mb-6 text-center">ZENITHAR</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input name="username" placeholder="Username"
+               class="w-full p-3 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-red-500" />
+
+        <input type="password" name="password" placeholder="Password"
+               class="w-full p-3 border rounded mb-6 focus:outline-none focus:ring-2 focus:ring-red-500" />
+
+        <button class="w-full bg-red-600 text-white p-3 rounded-lg hover:bg-red-700 transition">
+            Login
+        </button>
+    </form>
+</div>
+
+</body>
+</html>
